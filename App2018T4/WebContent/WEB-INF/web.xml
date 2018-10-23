@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>App2018T4</display-name>
+  <welcome-file-list>
+    <welcome-file>bibliotecaCadastro.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>LivroController</display-name>
+    <servlet-name>LivroController</servlet-name>
+    <servlet-class>controle.LivroController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LivroController</servlet-name>
+    <url-pattern>/LivroController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>BibliotecaController</display-name>
+    <servlet-name>BibliotecaController</servlet-name>
+    <servlet-class>controle.BibliotecaController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BibliotecaController</servlet-name>
+    <url-pattern>/BibliotecaController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FinanceiroController</display-name>
+    <servlet-name>FinanceiroController</servlet-name>
+    <servlet-class>controle.FinanceiroController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FinanceiroController</servlet-name>
+    <url-pattern>/FinanceiroController</url-pattern>
+  </servlet-mapping>
+</web-app>

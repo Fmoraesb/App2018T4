@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Cálculo Financeiro</title>
+</head>
+<body>
+
+	<form action="FinanceiroController" method="post">
+		<input type="submit" value="Calcular">
+		<hr>
+		
+		<h3>Nome</h3>
+		<input type="text" name="nome">
+		
+		<h3>Primeiro valor</h3>
+		<input type="text" name="primeiroValor">
+
+		<h3>Segundo valor</h3>
+		<input type="text" name="segundoValor">
+		
+		<h3>Operação</h3>
+		<select name="operacao">
+			<option value="+">Soma</option>
+			<option value="-">Subtração</option>
+			<option value="*">Multiplicação</option>
+			<option value="/">Divisão</option>
+		</select>
+		
+		<h3>Adicional</h3>
+		<input type="radio" name="adicional" value="25">Adicionar 25% ao valor<br>
+		<input type="radio" name="adicional" value="50">Adicionar 50% ao valor<br>
+		<input type="radio" name="adicional" value="75">Adicionar 75% ao valor<br>
+		<input type="radio" name="adicional" value="100">Adicionar 100% ao valor<br>
+	</form>
+
+</body>
+</html>
