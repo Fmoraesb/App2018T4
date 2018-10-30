@@ -1,8 +1,6 @@
 package controle;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -38,26 +36,8 @@ public class BibliotecaController extends HttpServlet {
 		b.setEndereco(e);
 		b.setNome(request.getParameter("nome"));		
 
-		PrintWriter out = response.getWriter();
-		//out.println(b.toString());
+		request.setAttribute("resultado", b.toString("<br>"));
 		
-		out.println(
-				"<!DOCTYPE html>" + 
-				"<html>" + 
-				"<head>" + 
-				"<meta charset='ISO-8859-1'>" + 
-				"<title>Insert title here</title>" + 
-				"</head>" + 
-				"<body>" + 
-				"	<form action='BibliotecaController' method=get>" + 
-				"		<input type='submit' value='Voltar'>" +  
-				"		<h3>Biblioteca cadastrada com sucesso!</h3>" + 
-				"		<h4>"+ b.toString("<br>") +"</h4>" + 
-				"	</form>" + 
-				"</body>" + 
-				"</html>"
-				);
-		
-//		request.getRequestDispatcher("finalizaBiblioteca.html").forward(request, response);
+		request.getRequestDispatcher("finalizaBiblioteca.jsp").forward(request, response);
 	}
 }
